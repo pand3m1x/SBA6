@@ -8,7 +8,7 @@
 
 //I just took this from mod-6 inventory tracker and modified it for e-commerce system
 
-export class Product { // lesson 3
+export class Product {
   static taxRate = 0.10; // taxRate isn't registering correctly
 
   sku: string;
