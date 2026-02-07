@@ -15,7 +15,7 @@ export class ProductError extends Error { //lesson 5 error for product retrieve 
   }
 }
 //price negative number
-class DiscountError extends Error { // error for applying discount
+export class DiscountError extends Error { // error for applying discount
   message:string
 
   constructor (message:string){
@@ -24,7 +24,7 @@ class DiscountError extends Error { // error for applying discount
   }
 }
 
-class TaxCalError extends Error { // error for tax calculation
+export class TaxCalError extends Error { // error for tax calculation
   message:string
   
   constructor (message:string){

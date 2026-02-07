@@ -11,7 +11,7 @@
 // Beauty and Perfumes: sku, title, price, description
 
 export class Product {
-  static taxRate = 0.10; // taxRate isn't registering correctly
+  // static taxRate = 0.10; // Do I need a static taxRate if I have a tax calculator?
 
   protected sku: string;
   public name: string;
@@ -29,10 +29,10 @@ constructor(sku: string, name: string, price: number,description:string,) {
   return `${this.name}: ${this.description} ${this.name} costs $${this.price}.`;
   }
 
-  discountedPrice(): number { // 10 percent coupon
+  discount(): number { // example 10 percent coupon
     return this.price * (Product.discount);
   }
-  totalPrice(): string{
+  finalPrice(): string{
     return this.price ()
   }
 }

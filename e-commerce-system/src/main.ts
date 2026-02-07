@@ -4,10 +4,12 @@
 // Use asynchronous functions to fetch product data and display it.
 // Demonstrate error handling and OOP principles in action.
 
-import from './discountCalculator.js'
-import from './product.js'
-import from './errorHandler.js'
-import from './taxCalculator.js'
+import {applyDiscount} from './discountCalculator.js'
+import {Product} from './product.js'
+import {ProductError} from './errorHandler.js'
+import {DiscountError} from './errorHandler.js'
+import {TaxCalError} from './errorHandler.js'
+import {calculateTax} from './taxCalculator.js'
 
 fetch ('https://dummyjson.com/products?limit=10&select=sku,title,price,description,discountPercentage')
   .then(res => res.json())
