@@ -13,4 +13,20 @@ fetch ('https://dummyjson.com/products?limit=10&select=sku,title,price,descripti
   .then(res => res.json())
   .then(console.log);
 
-  
+  getProductDetails()
+  .then((product) => {
+    console.log("Fetched product:", product);
+    return (product);
+  })
+  .then((discount) => {
+    // Uncomment the line below if you want to throw an error
+    // throw new Error("Can't fetch reviews");
+    console.log("Fetched reviews:", reviews);
+    return totalPrice(reviews);
+  })
+  .then((totalPrice) => {
+    console.log("Price after discount", totalPrice);
+  })
+  .catch((e) => {
+    console.error(e);
+  });

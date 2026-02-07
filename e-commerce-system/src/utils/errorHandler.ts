@@ -5,7 +5,8 @@
 //  different types of errors gracefully.
 
 //quanity less than 1
-class ProductError extends Error { //lesson 5 error for product retrieve data
+export class ProductError extends Error { //lesson 5 error for product retrieve data
+  // if I have a tax app, I don't need a static tax do I?
   message:string
 
   constructor (message:string){

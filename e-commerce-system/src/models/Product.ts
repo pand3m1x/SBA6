@@ -8,17 +8,17 @@
 
 // mod-6 inventory tracker and modified it for e-commerce system
 
-// needs sku, title, price, description
+// Beauty and Perfumes: sku, title, price, description
 
 export class Product {
   static taxRate = 0.10; // taxRate isn't registering correctly
 
   protected sku: string;
-  name: string;
-  price: number;
-  description:string;
+  public name: string;
+  public price: number;
+  public description:string;
 
-constructor(sku: string, name: string, price: number,) {
+constructor(sku: string, name: string, price: number,description:string,) {
   this.sku = sku;
   this.name = name;
   this.price = price;
@@ -26,11 +26,13 @@ constructor(sku: string, name: string, price: number,) {
   }
 
   displayDetails(): string {
-  return `${this.name} costs $${this.price}.`;
+  return `${this.name}: ${this.description} ${this.name} costs $${this.price}.`;
   }
 
-  discountedPrice(): number { 
-    return this.price * (Product.taxRate + 1);
+  discountedPrice(): number { // 10 percent coupon
+    return this.price * (Product.discount);
   }
-
+  totalPrice(): string{
+    return this.price ()
+  }
 }
