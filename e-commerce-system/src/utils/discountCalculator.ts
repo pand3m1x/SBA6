@@ -19,3 +19,6 @@ let finalPrice = applyDiscount (price,discount)
 console.log(`${price} for ${product}`)
 console.log(`${10}% discount!`)
 console.log(`Your new price for ${product} is ${finalPrice}`)
+
+// for revisiting applying discount conditionals for quanity ammount 
+// https://stackoverflow.com/questions/28988027/javascript-forms-applying-a-discount-for-a-certain-quantity

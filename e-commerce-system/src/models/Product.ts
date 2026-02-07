@@ -29,11 +29,11 @@ constructor(sku: string, name: string, price: number,description:string,) {
   return `${this.name}: ${this.description} ${this.name} costs $${this.price}.`;
   }
 
-  applyDiscount(): number { // example 10 percent coupon
+  applyDiscount():string{ // example 10 percent coupon
     // let discount = 10
-    return this.price * (discount);
+    return `${discountPercentage} applied!`;
   }
-  finalPrice(): string{
-    return this.price ()
+  finalPrice(): string{ //is tax before or after discount? 
+    return this.price * (discountPercentage/100);
   }
 }
